@@ -1,7 +1,6 @@
 # Entregavel03-Software
 Terceiro entregável da disciplina de Ambiente e Desenvolvimento de software 
 <hr>
-## Passo a passo para essa atividade
 
 ### Criar um novo projeto
 
@@ -15,7 +14,7 @@ No terminal do Visual Studio Code, execute o comando para instalar o **Express**
 
 ### Criar servidor
 
-Com o **Express** instalado, vamos criar um servidor. 
+Com o **Express** instalado, deve-se criar um servidor. 
 
 1. Crie primeiro um arquivo chamado `app.js` 
 2. Copie o código a seguir nele:
@@ -35,10 +34,9 @@ app.listen(port, function() {
   console.log(`App de Exemplo escutando na porta http://localhost:${port}/`);
 });
 ```
-
-### Executando o servidor
-
-No terminal do Visual Studio Code, execute o comando `node app.js`e abra o seu navegador na url [http://localhost:3001](http://localhost:3001).
+<hr>
+## No terminal do Vs Code, execute o comando `node app.js`
+## Abra o seu navegador na url [http://localhost:3001](http://localhost:3001).
 
 ### Criar uma requisição POST
 
@@ -61,7 +59,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 ```
 
-4 Em seguida, no corpo da função `post`, cole o seguinte código:
+4. Em seguida, no corpo da função `post`, cole o seguinte código:
 
 ```javascript
 var body = req.body;
@@ -73,12 +71,9 @@ Pronto :)
 
 Salve o arquivo, execute `npm app.js` no terminal! Isso faz com ele execute.
 
-### Testando seu código via Postman
-
-
 ### Criando uma função soma
 
-Pronto, agora que você consegue ler os dados enviados pelo usuário, vamos usar os dados para realizar uma soma. Veja a função soma a seguir e como integrar ela em seu site. 
++ Veja a função soma a seguir e como integrar ela em seu site. 
 
 ```javascript
 function soma(a, b) {
@@ -94,4 +89,10 @@ var resultado = soma(body.a, body.b);
 
 res.send(`O resultado da soma de ${body.a} e ${body.b} é ${resultado}`);
 ```
-
+### Para criar as outras funções de subtração, divisão e multiplicação, basta se basear em como foi feito a função soma :)
+### Indo para o POSTMAN testar verificar o código:
+1. Depois de já ter executado a porta no terminal do vs code
+2. Vá para o postman e rode a porta http://localhost:3001/ e clique em "send". Assim como na imagem abaixo: 
+![image](https://github.com/bea-brito/Entregavel03-Software/assets/110315709/9373872d-f27c-41aa-9b9c-dfe5dc420c66)
+3. Depois teste cada um dessa forma:
+![image](https://github.com/bea-brito/Entregavel03-Software/assets/110315709/8ead8dbb-3ecd-4186-bf7e-c3c42ed49a79)
